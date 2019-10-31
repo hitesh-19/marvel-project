@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FanclubComponent } from './fanclub.component';
 
+import { FanclubRoutingModule } from './fanclub-routing.module';
+import { FanclubComponent } from './fanclub.component';
 
 
 @NgModule({
   declarations: [FanclubComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FanclubRoutingModule
   ]
 })
 export class FanclubModule { }
