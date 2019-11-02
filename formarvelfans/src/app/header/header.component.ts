@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,20 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    const $ = window["$"];
+
+    $("#search").hover(function() {
+      $("#search-box").animate({
+        width:'20rem',
+        display: 'block',
+        opacity: 1
+      }, 400)
+    });
+  }
+
+  searchItems(item) {
+    console.log(item)
   }
 
 }

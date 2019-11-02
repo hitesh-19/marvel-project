@@ -13,8 +13,10 @@ export class LandingComponent implements OnInit {
 
     const $ = window["$"];
 
-    $("#btn1").click(function() {
-      console.log('hello')
+    $("#btn1").hover(function() {
+      $("#cube1").animate({
+        width: '100px'
+      }, 2000)
     })
   }
 
