@@ -10,6 +10,12 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    const $ = window["$"];
+
+    $("#btn1").click(function() {
+      console.log('hello')
+    })
   }
 
 }
