@@ -10,8 +10,13 @@
 .header-signup{
     width: 25%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    border-left: 1px solid rgb(59, 59, 59);
+    border-right: 1px solid rgb(59, 59, 59);
 }
 .header-logo{
     width: 50%;
@@ -82,7 +87,7 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .header-signup {
         display: none;
     }
@@ -95,5 +100,8 @@
         width: 8rem;
         height: 2rem;
         overflow: hidden;
+    }
+    .search-box {
+        display: none;
     }
 }

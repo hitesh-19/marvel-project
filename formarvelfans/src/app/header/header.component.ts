@@ -8,6 +8,8 @@ import { $ } from 'protractor';
 })
 export class HeaderComponent implements OnInit {
 
+  public value;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +23,11 @@ export class HeaderComponent implements OnInit {
         opacity: 1
       }, 400)
     });
+
+    $("li").hover(function() {
+      this.value = $("a").innerHTML
+      console.log(this.value)
+    })
   }
 
   searchItems(item) {

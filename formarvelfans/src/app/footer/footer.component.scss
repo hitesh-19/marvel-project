@@ -1,0 +1,120 @@
+.footer {
+    width: 100%;
+    background: rgb(29, 29, 29);
+    color: #fff;
+}
+.footer .row {
+    padding: 5rem 0rem;
+}
+.col-md-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-md-2 img {
+    width: 5rem;
+    height: 7rem;
+}
+.col-md-1{
+    padding: 0;
+}
+.col-md-1 ul {
+    padding: 0;
+    margin: 0;
+}
+.col-md-1 ul li {
+    font-weight: 600;
+    list-style: none;
+    padding-bottom: 20px;
+    margin-left: 0;
+    cursor: pointer;
+}
+.col-md-1 ul li:hover {
+    opacity: 0.6;
+}
+.col-md-6 a {
+    text-decoration: none;
+    color: #fff;
+}
+.col-md-6 .row img {
+    width: 5rem;
+    height: 3rem;
+}
+.col-md-6 .row {
+    padding: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.col-md-6 .row:hover h6,p {
+    opacity: 0.6;
+}
+.col-md-6 .row:hover .col-2 img {
+    opacity: 0.6;
+}
+.col-md-3 .media-images {
+    margin-top: 2rem;
+}
+.col-md-3 .upper-level-media img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.col-md-3 .lower-level-media {
+    margin-top: 1rem;
+}
+.col-md-3 .lower-level-media img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.col-md-3 .lower-level-media img:hover {
+    opacity: 1;
+}
+.col-md-3 .upper-level-media img:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .col-md-1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 10px 0px;
+        border: 1px solid rgb(59, 59, 59);
+        padding: 5px 0px;
+    }
+    .col-md-6 {
+        margin: 5px 20px;
+    }
+    .col-md-6 .row img {
+        width: 3rem;
+        height: 2rem;
+    }
+    .col-md-6 .row h6 {
+        font-size: 12px;
+    }
+    .col-md-6 .row p {
+        font-size: 10px;
+    }
+    .col-md-3 {
+        border-top: 1px solid rgb(59, 59, 59);
+        padding-top: 5px;
+    }
+    .col-md-3 h6 {
+        text-align: center;
+    }
+    .col-md-3 .media-images .upper-level-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .col-md-3 .media-images .lower-level-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
