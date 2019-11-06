@@ -1,1 +1,48 @@
-<p>characters works!</p>
+<div class="dropdown"> 
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="heading">
+                Marvel Characters 
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Sort</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="characters">
+    <div class="row" id="id1">
+        <div class="col-md-3">
+            <img [src]="getImage">
+        </div>
+        <div class="col-md-9">
+            <div class="hero-content">
+                <h6>GROOT</h6>
+                <p>By : <b>Vin Deisel & Kevin Michael Richardson</b></p>
+                <p>Movies : Guradian of Galaxy & Avengers</p>
+            </div>
+        </div>  
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <img [src]="getImage">
+        </div>
+        <div class="col-md-9">
+            <div class="hero-content">
+                <h6>GROOT</h6>
+                <p>Vin Deisel & Kevin Michael Richardson</p>
+                <p>Guradian of Galaxy & Avengers</p>
+            </div>
+        </div>
+    </div>    
+</div>
