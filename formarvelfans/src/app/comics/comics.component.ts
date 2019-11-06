@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComicsComponent implements OnInit {
 
+  public comics = ['hello','hello','hello','hello','hello','hello']
+
   constructor() { }
 
   ngOnInit() {
