@@ -60,9 +60,9 @@
     padding-top: 0px;
     padding-bottom: 5px;
 }
-.movies .row .col-sm-2 .single-movie:hover img {
-    opacity: 0.8;
-}
+// .movies .row .col-sm-2 .single-movie:hover img {
+//     opacity: 0.8;
+// }
 .movies .row .col-sm-2 .single-movie img {
     width: 13rem;
     height: 18rem;
@@ -71,6 +71,7 @@
     padding: 0px 5px;
     cursor: pointer;
     font-size: 15px;
+    margin-top: 10px;
 }
 .movies .row .col-sm-2 .content h6 {
     font-size: 18px;

@@ -1,0 +1,46 @@
+.carousel-container {
+    width: 100%;
+    // height: 30rem;
+    justify-content: space-between;
+    background: #000;
+}
+.carousel-container .carousel-inner img {
+    width: 100%;
+    height: 29rem;
+}
+.row .col-lg-4 {
+    padding: 0;
+}
+.row .upcoming-movie .movie-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0px;
+}
+.row .upcoming-movie .movie-image img {
+    // width: 12rem;
+    height: 20rem;
+    overflow: hidden;
+}
+.row .upcoming-movie .content {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.row .upcoming-movie .content h6 {
+    font-size: 23px;
+}
+.row .upcoming-movie .book-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.row .upcoming-movie .book-button button {
+    border: none;
+    color: #fff;
+    background: rgb(219, 33, 33);
+    padding: 10px 20px;
+    font-size: 15px;
+}
