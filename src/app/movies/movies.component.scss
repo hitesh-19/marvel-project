@@ -79,3 +79,27 @@
 .movies .row .col-sm-2 .content:hover {
     color: rgb(219, 33, 33);
 }
+
+@media screen and (max-width: 800px) {
+    .movies .row .col-sm-2 .single-movie img {
+        width: 6rem;
+        height: 8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dropdown .col-sm-10 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .movies .row .col-sm-2 .single-movie img {
+        width: 13rem;
+        height: 18rem;
+    }
+    .movies .row .col-sm-2 .content {
+        margin-left: 2rem;
+    }
+    .movies .row .col-sm-2 {
+        border-bottom: 3px solid rgba(255, 204, 38, 0.349);
+    }
+}

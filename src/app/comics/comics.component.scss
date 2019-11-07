@@ -78,3 +78,10 @@
 .movies .row .col-sm-2 .content:hover {
     color: rgb(219, 33, 33);
 }
+
+@media screen and (max-width: 500px) {
+    .dropdown .col-sm-10 {
+        font-size: 40px;
+        text-align: center;
+    }
+}
