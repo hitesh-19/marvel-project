@@ -79,6 +79,18 @@
     color: rgb(219, 33, 33);
 }
 
+@media screen and (max-width: 1200px) {
+    .movies .row .col-sm-2 .single-movie img {
+        width: 8rem;
+        height: 10rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .movies .row .col-sm-2 .single-movie img {
+        width: 6rem;
+        height: 8rem;
+    }
+}
 @media screen and (max-width: 500px) {
     .dropdown .col-sm-10 {
         font-size: 40px;

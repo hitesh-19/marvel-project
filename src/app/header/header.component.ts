@@ -24,14 +24,10 @@ export class HeaderComponent implements OnInit {
       }, 400)
     });
 
-    $("li").hover(function() {
-      this.value = $("a").innerHTML
-      console.log(this.value)
-    })
   }
 
-  searchItems(item) {
-    console.log(item)
+  signup() {
+    alert('Working on it')
   }
 
 }
