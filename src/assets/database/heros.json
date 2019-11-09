@@ -1,0 +1,198 @@
+{
+    "heros": [
+        {
+            "name": "Captain America",
+            "roled_by": "Chris Evans",
+            "movies": [
+                "Captian America: The First Avenger",
+                "The Avengers",
+                "Captian America: The Winter Soldier",
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Spider-Man: Homecoming",
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/captianamerica1.jpg",
+                "../../assets/images/heros/captianamerica2.jpg"
+            ]
+        },
+        {
+            "name": "Iron Man",
+            "roled_by": "Robert Downey Jr.",
+            "movies": [
+                "Iron Man",
+                "Iron Man 2",
+                "The Avengers",
+                "Iron Man 3",
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Spider-Man: Homecoming",
+                "Avengers: Infinity War",
+                "Avengers: Endgame",
+                "Black Widow"
+            ],
+            "image_url": [
+                "../../assets/images/heros/ironman1.jpg",
+                "../../assets/images/heros/ironman2.jpg"
+            ]
+        },
+        {
+            "name": "Thor Odinson",
+            "roled_by": "Chris Hemsworth",
+            "movies": [
+                "Thor",
+                "The Avengers",
+                "Thor: The Dark World",
+                "Avengers: Age of Ultron",
+                "Thor: Ragnarok",
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/thor1.jpg",
+                "../../assets/images/heros/thor2.jpg"
+            ]
+        },
+        {
+            "name": "The Incredible Hulk",
+            "roled_by": "Mark Ruffalo & Edward Norton",
+            "movies": [
+                "The Incredible Hulk",
+                "The Avengers",
+                "Iron Man 3",
+                "Avengers: Age of Ultron",
+                "Thor: Ragnarok", 
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/hulk1.jpg",
+                "../../assets/images/heros/hulk2.jpg"
+            ]
+        },
+        {
+            "name": "Black Widow",
+            "roled_by": "Scarlett Johansson",
+            "movies": [
+                "Iron Man 2",
+                "The Avengers",
+                "Captian America: The Winter Soldier",
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Avengers: Infinity War",
+                "Avengers: Endgame" 
+            ],
+            "image_url": [
+                "../../assets/images/heros/blackwidow.jpg",
+                "../../assets/images/heros/blackwidow2.jpg"
+            ]
+        },
+        {
+            "name": "Hawkeye",
+            "roled_by": "Jeremy Renner",
+            "movies": [
+                "Thor",
+                "The Avengers",
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/hawkeye1.jpg",
+                "../../assets/images/heros/hawkeye2.jpg"
+            ]
+        },
+        {
+            "name": "Quicksilver",
+            "roled_by": "Aaron Taylor-Johnson",
+            "movies": [
+                "Captian America: The Winter Soldier",
+                "Avengers: Age of Ultron"
+            ],
+            "image_url": [
+                "../../assets/images/heros/quick1.jpg",
+                "../../assets/images/heros/quick2.jpg"
+            ]
+        },
+        {
+            "name": "Scarlet Witch",
+            "roled_by": "Elizabeth Olsen",
+            "movies": [
+                "Captian America: The Winter Soldier",
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/witch.jpg",
+                "../../assets/images/heros/witch2.jpg"
+            ]
+        },
+        {
+            "name": "The Vision",
+            "roled_by": "Paul Bettany",
+            "movies": [
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Avengers: Infinity War"
+            ],
+            "image_url": [
+                "../../assets/images/heros/vision1.jpg",
+                "../../assets/images/heros/vision2.jpg"
+            ]
+        },
+        {
+            "name": "War Machine (Iron Patriot)",
+            "roled_by": "Don Cheadle",
+            "movies": [
+                "Iron Man 2",
+                "Iron Man 3",
+                "Avengers: Age of Ultron",
+                "Captian America: Civil War",
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/warmachine1.jpg",
+                "../../assets/images/heros/warmachine2.jpg"
+            ]
+        },
+        {
+            "name": "Falcon",
+            "roled_by": "Anthony Mackie",
+            "movies": [
+                "Captian America: The Winter Soldier",
+                "Avengers: Age of Ultron",
+                "Ant-Man",
+                "Captian America: Civil War",
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+
+            ],
+            "image_url": [
+                "../../assets/images/heros/falcon1.jpg",
+                "../../assets/images/heros/falcon2.jpg"
+            ]
+        },
+        {
+            "name": "Bucky Barnes",
+            "roled_by": "Sebastian Stan",
+            "movies": [
+                "Captian America: The First Avenger",
+                "Captian America: The Winter Soldier",
+                "Ant-Man",
+                "Captian America: Civil War",
+                "Black Panther",
+                "Avengers: Infinity War",
+                "Avengers: Endgame"
+            ],
+            "image_url": [
+                "../../assets/images/heros/bucky1.jpg",
+                "../../assets/images/heros/bucky2.jpg"
+            ]
+        }
+    ]
+}

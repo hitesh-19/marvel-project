@@ -29,6 +29,21 @@ export class CharactersComponent implements OnInit {
       this.i++;
     }, 1000)
 
+  
+    const $ = window["$"];
+
+    $("#search").hover(function() {
+      $("#search-box").animate({
+        width:'20rem',
+        display: 'block',
+        opacity: 1
+      }, 400)
+    });
+
+  }
+
+  searchItems(item) {
+    console.log(item)
   }
 
 }

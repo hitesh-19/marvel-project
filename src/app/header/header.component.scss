@@ -25,34 +25,6 @@
     justify-content: center;
     align-items: center;
 }
-.search-box {
-    width: 25%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.search-box input {
-    padding: 5px 10px;
-    border: none;
-    width: 0rem;
-    height: 2rem;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.9);
-    opacity: 0;
-    
-}
-.search-box input:focus {
-    outline: none;
-}
-.search-box span{
-    padding: 3px;
-    border-radius: 7px;
-    cursor: pointer;
-}
-.search-box span img {
-    width: 2rem;
-    height: 2rem;
-}
 .header-logo img{
     width: 14rem;
     height: 4rem;

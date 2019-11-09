@@ -1,0 +1,34 @@
+{
+    "movies": [
+        {
+            "name": "Venom 2",
+            "release_date": "2020",
+            "image_url": "../../assets/images/upcoming-movies/venom2.jpg"
+        },
+        {
+            "name": "Black Widow",
+            "release_date": "30 April 2020",
+            "image_url": "../../assets/images/upcoming-movies/blackwidow.png"
+        },
+        {
+            "name": "Morbius",
+            "release_date": "31 June 2020",
+            "image_url": "../../assets/images/upcoming-movies/morbius.jpg"
+        },
+        {
+            "name": "The Eternals",
+            "release_date": "04 November 2020",
+            "image_url": "../../assets/images/upcoming-movies/theeternals.jpg"
+        },
+        {
+            "name": "Doctor Strange in the Multiverse of Madness",
+            "release_date": "06 May 2021",
+            "image_url": "../../assets/images/upcoming-movies/doctorstrange.jpg"
+        },
+        {
+            "name": "Thor: Love and Thunder",
+            "release_date": "04 November 2021",
+            "image_url": "../../assets/images/upcoming-movies/thor.jpg"
+        }
+    ]
+}

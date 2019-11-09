@@ -1,0 +1,129 @@
+{
+    "movies": [
+        {
+            "name": "Spider-Man 2",
+            "release_date": "23 July 2004",
+            "image_url": "../../assets/images/movies/spiderman2.jpg"
+        },
+        {
+            "name": "Iron Man",
+            "release_date": "1 May 2008",
+            "image_url": "../../assets/images/movies/ironman.jpg"
+        },
+        {
+            "name": "The Incredible Hulk",
+            "release_date": "20 June 2008",
+            "image_url": "../../assets/images/movies/hulk.jpg"
+        },
+        {
+            "name": "Iron Man 2",
+            "release_date": "7 May 2010",
+            "image_url": "../../assets/images/movies/ironman2.jpg"
+        },
+        {
+            "name": "Thor",
+            "release_date": "29 April 2011",
+            "image_url": "../../assets/images/movies/thor.jpg"
+        },
+        {
+            "name": "Captain America: The First Avenger",
+            "release_date": "29 July 2011",
+            "image_url": "../../assets/images/movies/captianamerica.jpg"
+        },
+        {
+            "name": "Ghost Rider: Spirit of Vengeance",
+            "release_date": "17 February 2012",
+            "image_url": "../../assets/images/movies/gostridder.jpg"
+        },
+        {
+            "name": "The Avengers",
+            "release_date": "27 April 2012",
+            "image_url": "../../assets/images/movies/avengers.jpg"
+        },
+        {
+            "name": "The Amazing Spider-Man",
+            "release_date": "29 June 2012",
+            "image_url": "../../assets/images/movies/amazingspiderman.jpg"
+        },
+        {
+            "name": "Iron Man 3",
+            "release_date": "26 April 2013",
+            "image_url": "../../assets/images/movies/ironman3.jpg"
+        },
+        {
+            "name": "Captain America: The Winter Soldier",
+            "release_date": "4 April 2014",
+            "image_url": "../../assets/images/movies/captianamerica2.jpg"
+        },
+        {
+            "name": "The Amazing Spider-Man 2",
+            "release_date": "1 May 2014",
+            "image_url": "../../assets/images/movies/amazingspiderman2.jpg"
+        },
+        {
+            "name": "Guardians of the Galaxy",
+            "release_date": "8 August 2014",
+            "image_url": "../../assets/images/movies/gaurdian.jpg"
+        },
+        {
+            "name": "Avengers: Age of Ultron",
+            "release_date": "24 April 2015",
+            "image_url": "../../assets/images/movies/avnegers2.jpg"
+        },
+        {
+            "name": "Ant-Man",
+            "release_date": "24 July 2015",
+            "image_url": "../../assets/images/movies/antman.jpg"
+        },
+        {
+            "name": "Deadpool",
+            "release_date": "12 February 2016",
+            "image_url": "../../assets/images/movies/deadpool.png"
+        },
+        {
+            "name": "Captain America: Civil War",
+            "release_date": "6 May 2016",
+            "image_url": "../../assets/images/movies/civilwar.jpg"
+        },
+        {
+            "name": "Spider-Man: Homecoming",
+            "release_date": "7 July 2017",
+            "image_url": "../../assets/images/movies/spidermanhomecoming.jpg"
+        },
+        {
+            "name": "Thor: Ragnarok",
+            "release_date": "3 November 2017",
+            "image_url": "../../assets/images/movies/thor2.jpg"
+        },
+        {
+            "name": "Avengers: Infinity War",
+            "release_date": "27 April 2018",
+            "image_url": "../../assets/images/movies/avengers3.jpg"
+        },
+        {
+            "name": "Venom",
+            "release_date": "5 October 2018",
+            "image_url": "../../assets/images/movies/venom.jpg"
+        },
+        {
+            "name": "Spider-Man: Into the Spider-Verse",
+            "release_date": "14 December 2018",
+            "image_url": "../../assets/images/movies/spiderversa.jpg"
+        },
+        {
+            "name": "Captain Marvel",
+            "release_date": "8 March 2019",
+            "image_url": "../../assets/images/movies/captainmarvel.jpg"
+        },
+        {
+            "name": "Avengers: Endgame",
+            "release_date": "26 April 2019",
+            "image_url": "../../assets/images/movies/avengers4.jpg"
+        },
+        {
+            "name": "Men in Black: International",
+            "release_date": "14 June 2019",
+            "image_url": "../../assets/images/movies/mib.jpg"
+        }
+    ]
+}

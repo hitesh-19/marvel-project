@@ -14,16 +14,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    const $ = window["$"];
-
-    $("#search").hover(function() {
-      $("#search-box").animate({
-        width:'20rem',
-        display: 'block',
-        opacity: 1
-      }, 400)
-    });
-
   }
 
   signup() {

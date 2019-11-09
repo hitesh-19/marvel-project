@@ -9,27 +9,46 @@
 .dropdown .row {
     margin: 0px 5px;
 }
-.dropdown .col-sm-10 {
+.dropdown .col-sm-7 {
     font-size: 70px;
     color: rgb(199, 19, 19);
     font-weight: 800;
     font-family: 'Abril Fatface', cursive;
     text-shadow: 3px 3px 2px rgb(0, 0, 0);
 }
-.dropdown .col-sm-2 {
+.dropdown .col-sm-5 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     margin-bottom: 1rem;
+    padding-right: 2rem;
 }
-.dropdown .col-sm-2 .input-group select {
-    border: none;
-    border: 2px solid rgb(219, 33, 33);
+.dropdown .col-sm-5 .search-box {
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.dropdown .col-sm-2 button {
+.dropdown .col-sm-5 .search-box input {
+    padding: 5px 10px;
     border: none;
-    background: rgb(219, 33, 33);
-    color: #fff;
+    width: 0rem;
+    height: 2rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    
+}
+.dropdown .col-sm-5 .search-box input:focus {
+    outline: none;
+}
+.dropdown .col-sm-5 .search-box span{
+    padding: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.dropdown .col-sm-5 .search-box span img {
+    width: 2rem;
+    height: 2rem;
 }
 .movies {
     margin-bottom: 1rem;
