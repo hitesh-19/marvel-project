@@ -7,6 +7,15 @@
 .carousel-container .carousel-inner img {
     width: 100%;
     height: 29rem;
+    opacity: 0.5;
+}
+.carousel-container .carousel-inner .carousel-caption {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(255, 255, 88);
 }
 .row .col-lg-4 {
     padding: 0;
@@ -64,14 +73,15 @@
     text-shadow: 3px 3px 2px rgb(0, 0, 0);
 }
 .upcoming-movies .col-sm-2 {
-    padding: 1rem;
+    padding: 0px 1rem;
+    padding-top: 3px;
     overflow: hidden;
     color: #fff;
 }
 .upcoming-movies .col-sm-2:hover {
-    padding-top: 14px;
-    padding-bottom: 5px;
-    color: rgb(255, 32, 32);
+    padding-top: 0px;
+    padding-bottom: 3px;
+    color: rgb(255, 66, 66);
     opacity: 0.8;
 }
 .upcoming-movies .col-sm-2 img {

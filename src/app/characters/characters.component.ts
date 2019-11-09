@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HerosService } from '../_services/heros.service';
 
 @Component({
   selector: 'app-characters',
@@ -13,21 +14,28 @@ export class CharactersComponent implements OnInit {
   public isDisplay = true;
   public i: number = 0;
 
-  constructor() { }
+  public characters = [];
+
+  constructor(private herosService: HerosService) { }
 
   ngOnInit() {
 
-    this.img1 = '../../assets/images/groot2.jpg'
-    this.img2 = '../../assets/images/groot1.jpg'
+    //getting heros
+    this.herosService.getHeros().subscribe(
+      data => {
+        console.log(data['heros'])
+        this.characters = data['heros']
+      }, err => {
+        console.log(err)
+      }
+    )
 
     setInterval(() => {
-      if(this.i%2 === 0) {
-        this.getImage = this.img1
-      } else {
-        this.getImage = this.img2
-      }
       this.i++;
-    }, 1000)
+      if(this.i === 2) {
+        this.i = 0;
+      }
+    }, 2000)
 
   
     const $ = window["$"];

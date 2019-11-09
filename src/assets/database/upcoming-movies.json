@@ -8,17 +8,17 @@
         {
             "name": "Black Widow",
             "release_date": "30 April 2020",
-            "image_url": "../../assets/images/upcoming-movies/blackwidow.png"
+            "image_url": "../../assets/images/upcoming-movies/blackwidow1.jpg"
         },
         {
             "name": "Morbius",
             "release_date": "31 June 2020",
-            "image_url": "../../assets/images/upcoming-movies/morbius.jpg"
+            "image_url": "../../assets/images/upcoming-movies/morbius1.jpg"
         },
         {
             "name": "The Eternals",
             "release_date": "04 November 2020",
-            "image_url": "../../assets/images/upcoming-movies/theeternals.jpg"
+            "image_url": "../../assets/images/upcoming-movies/theeternals1.jpg"
         },
         {
             "name": "Doctor Strange in the Multiverse of Madness",

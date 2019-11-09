@@ -16,19 +16,19 @@
     </div>
 </div>
 <div class="characters">
-    <div class="row" id="id1">
+    <div class="row" id="id1" *ngFor="let character of characters">
         <div class="col-md-3">
-            <img [src]="getImage">
+            <img [src]="character.image_url[i]">
         </div>
         <div class="col-md-9">
             <div class="hero-content">
-                <h6>GROOT</h6>
-                <p>By : <b>Vin Deisel & Kevin Michael Richardson</b></p>
-                <p>Movies : Guradian of Galaxy & Avengers</p>
+                <h6>{{ character.name }}</h6>
+                <p>By : <b>{{ character.roled_by }}</b></p>
+                <p>Movies : <span *ngFor="let movie of character.movies "><b class="bracket">[</b>{{ movie }}<b class="bracket">]</b> </span></p>
             </div>
         </div>  
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-3">
             <img [src]="getImage">
         </div>
@@ -39,5 +39,5 @@
                 <p>Guradian of Galaxy & Avengers</p>
             </div>
         </div>
-    </div>    
+    </div>     -->
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LandingPageService } from '../_services/landing-page.service';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +12,9 @@ export class LandingComponent implements OnInit {
   public stanLee: string;
   public i: number = 0;
 
-  constructor() { }
+  public upcomingMovies = [];
+
+  constructor(private landingPageService: LandingPageService) { }
 
   ngOnInit() {
 
@@ -31,6 +34,16 @@ export class LandingComponent implements OnInit {
         this.i = 0;
       }
     }, 2000)
+
+    // getting upcoming moives
+    this.landingPageService.getUpcomingMovies().subscribe(
+      data => {
+        console.log(data['movies'])
+        this.upcomingMovies = data['movies']
+      }, err => {
+        console.log(err)
+      }
+    )
   }
 
 }

@@ -79,9 +79,9 @@
     padding-top: 0px;
     padding-bottom: 5px;
 }
-// .movies .row .col-sm-2 .single-movie:hover img {
-//     opacity: 0.8;
-// }
+.movies .row .col-sm-2 .single-movie:hover img {
+    opacity: 0.9;
+}
 .movies .row .col-sm-2 .single-movie img {
     width: 13rem;
     height: 18rem;
@@ -101,8 +101,8 @@
 
 @media screen and (max-width: 1200px) {
     .movies .row .col-sm-2 .single-movie img {
-        width: 8rem;
-        height: 10rem;
+        width: 10rem;
+        height: 15rem;
     }
 }
 @media screen and (max-width: 900px) {
