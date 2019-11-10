@@ -16,7 +16,7 @@
     </div>
 </div>
 <div class="characters">
-    <div class="row" id="id1" *ngFor="let character of characters">
+    <div class="row" id="id1" *ngFor="let character of filteredArray">
         <div class="col-md-3">
             <img [src]="character.image_url[i]">
         </div>
@@ -40,4 +40,7 @@
             </div>
         </div>
     </div>     -->
+</div>
+<div class="noresult" [ngStyle]="{display: noResult}">
+    <h1>No Result Found</h1>
 </div>

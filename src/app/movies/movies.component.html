@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-<div class="movies" *ngFor="let series of movies">
+<div class="movies" *ngFor="let series of filteredArray">
     <div class="movie-name" >
         {{ series.series}} <span>{{ series.interval }}</span>
     </div>
@@ -32,89 +32,8 @@
                 <p>{{ movie.release_date }}</p>
             </div>
         </div>
-        <!-- <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div> -->
-        <div class="col-sm-1">
-            
-        </div>
-        <!-- <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div> -->
     </div>
+</div>
+<div class="noresult" [ngStyle]="{display: noResult}">
+    <h1>No Result Found</h1>
 </div>

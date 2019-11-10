@@ -15,6 +15,9 @@ export class CharactersComponent implements OnInit {
   public i: number = 0;
 
   public characters = [];
+  public filteredArray = [];
+  public filter: string;
+  public noResult = 'none';
 
   constructor(private herosService: HerosService) { }
 
@@ -23,8 +26,9 @@ export class CharactersComponent implements OnInit {
     //getting heros
     this.herosService.getHeros().subscribe(
       data => {
-        console.log(data['heros'])
+        // console.log(data['heros'])
         this.characters = data['heros']
+        this.filteredArray = this.characters
       }, err => {
         console.log(err)
       }
@@ -42,7 +46,7 @@ export class CharactersComponent implements OnInit {
 
     $("#search").hover(function() {
       $("#search-box").animate({
-        width:'20rem',
+        width:'15rem',
         display: 'block',
         opacity: 1
       }, 400)
@@ -51,7 +55,39 @@ export class CharactersComponent implements OnInit {
   }
 
   searchItems(item) {
-    console.log(item)
+    // console.log(item.value)
+    this.filter = item.value.slice(0,3)
+    this.filter = this.filter.charAt(0).toUpperCase()+this.filter.slice(1)
+    // console.log(this.filter)
+
+    this.filteredArray = [];
+
+    if(item.value === '') {
+      this.filteredArray = this.characters
+    }
+
+    this.characters.forEach((element, index, array) => {
+      if(element.name.slice(0,3) === this.filter) {
+        // console.log(element.name)
+        
+        this.filteredArray.push(element)
+      } else if (index === array.length-1 && this.filteredArray.length === 0) {
+        
+        this.characters.forEach((element, index, array) => {
+          if(element.roled_by.slice(0,3) === this.filter) {
+            // console.log(element.name)
+            
+            this.filteredArray.push(element)
+          } else if (index === array.length-1 && this.filteredArray.length === 0) {
+            this.noResult = 'block';
+          }
+        })
+      } 
+      
+      if (this.filteredArray.length > 0) {
+        this.noResult = 'none';
+      }
+    })
   }
 
 }
