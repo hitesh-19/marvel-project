@@ -65,42 +65,50 @@
 }
 .movies .row {
     width: 100%;
+    padding: 0px 5rem;
 }
-.movies .row .col-sm-2 {
+.movies .row .col-sm-3 {
     padding: 0;
 }
-.movies .row .col-sm-2 .single-movie {
+.movies .row .col-sm-3 .single-movie {
+    width: 100%;
     padding-top: 5px;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    transition: 0.2s ease;
+    // border: 1px solid yellow;
 }
-.movies .row .col-sm-2 .single-movie:hover {
+.movies .row .col-sm-3 .single-movie:hover {
     padding-top: 0px;
     padding-bottom: 5px;
 }
-.movies .row .col-sm-2 .single-movie:hover img {
+.movies .row .col-sm-3 .single-movie:hover img {
     opacity: 0.9;
 }
-.movies .row .col-sm-2 .single-movie img {
+.movies .row .col-sm-3 .single-movie img {
     width: 13rem;
     height: 18rem;
 }
-.movies .row .col-sm-2 .content {
+.movies .row .col-sm-3 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0px 5px;
     cursor: pointer;
     font-size: 15px;
     margin-top: 10px;
+    text-align: center;
 }
-.movies .row .col-sm-2 .content h6 {
+.movies .row .col-sm-3 .content h6 {
     font-size: 18px;
 }
-.movies .row .col-sm-2 .content:hover {
+.movies .row .col-sm-3 .content .inner-content:hover {
     color: rgb(219, 33, 33);
 }
 .noresult{
     width: 100%;
-    height: 20%;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,13 +119,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .movies .row .col-sm-2 .single-movie img {
+    .movies .row .col-sm-3 .single-movie img {
         width: 10rem;
         height: 15rem;
     }
 }
 @media screen and (max-width: 900px) {
-    .movies .row .col-sm-2 .single-movie img {
+    .movies .row .col-sm-3 .single-movie img {
         width: 6rem;
         height: 8rem;
     }
@@ -128,14 +136,14 @@
         font-size: 40px;
         text-align: center;
     }
-    .movies .row .col-sm-2 .single-movie img {
+    .movies .row .col-sm-3 .single-movie img {
         width: 13rem;
         height: 18rem;
     }
-    .movies .row .col-sm-2 .content {
+    .movies .row .col-sm-3 .content {
         margin-left: 2rem;
     }
-    .movies .row .col-sm-2 {
+    .movies .row .col-sm-3 {
         border-bottom: 3px solid rgba(255, 204, 38, 0.349);
     }
 }

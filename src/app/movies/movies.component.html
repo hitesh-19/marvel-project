@@ -20,16 +20,15 @@
         {{ series.series}} <span>{{ series.interval }}</span>
     </div>
     <div class="row">
-        <div class="col-sm-1">
-            
-        </div>
-        <div class="col-sm-2" *ngFor="let movie of series.movies">
+        <div class="col-sm-3" *ngFor="let movie of series.movies">
             <div class="single-movie">
                 <img [src]="movie.image_url" class="img-fluid" alt="">
             </div>
             <div class="content">
-                <h6>{{ movie.name }}</h6>
-                <p>{{ movie.release_date }}</p>
+                <div class="inner-content">
+                    <h6>{{ movie.name }}</h6>
+                    <p>{{ movie.release_date }}</p>
+                </div>
             </div>
         </div>
     </div>

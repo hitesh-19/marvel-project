@@ -15,112 +15,24 @@
         </div>
     </div>
 </div>
-<div class="movies" *ngFor="let comic of comics">
+<div class="movies" *ngFor="let comic of filteredArray">
     <div class="movie-name">
-        Spiderman <span>(2013-19)</span>
+        {{comic.series}} <span>({{ comic.interval }})</span>
     </div>
     <div class="row">
-        <div class="col-sm-1">
-            
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
+        <div class="col-sm-3" *ngFor="let comics of comic.comics">
+            <div class="comic-box">
+                <img [src]="comics.image_url" alt="">
             </div>
             <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
+                <div class="inner-content">
+                    <h6>{{ comics.name }}</h6>
+                    <p>{{ comics.release_data }}</p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-1">
-            
-        </div>
-        <div class="col-sm-1">
-            
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="single-movie">
-                <img src="../../assets/images/spiderman-homecoming.jpg" alt="">
-            </div>
-            <div class="content">
-                <h6>Spiderman Homecoming</h6>
-                <p>26.02.2019</p>
-            </div>
-        </div>
-        <div class="col-sm-1">
-            
         </div>
     </div>
+</div>
+<div class="noresult" [ngStyle]="{display: noResult}">
+    <h1>No Result Found</h1>
 </div>
