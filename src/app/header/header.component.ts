@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LandingPageService } from '../_services/landing-page.service';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public value;
+  // public value;
+  // public signinCondition = 'none';
 
-  constructor() { }
+  constructor(private landingPageService: LandingPageService) { }
 
   ngOnInit() {
 
-  }
-
-  signup() {
-    alert('Working on it')
   }
 
 }

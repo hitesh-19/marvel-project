@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class LandingPageService {
 
   private API = '/assets/database';
+  public signupTabs: boolean = false;
 
   constructor(private http: HttpClient) { }
 

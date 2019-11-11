@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LandingPageService } from '../_services/landing-page.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-landing',
@@ -11,12 +12,26 @@ export class LandingComponent implements OnInit {
   public kevinFeige: string;
   public stanLee: string;
   public i: number = 0;
+  public loginContent: string = 'SignUp';
+  public signupCondition: boolean = true;
+  public signTab: boolean = true;
+  public buttonText = 'SignUp';
 
   public upcomingMovies = [];
 
   constructor(private landingPageService: LandingPageService) { }
 
   ngOnInit() {
+
+    // getting upcoming moives
+    this.landingPageService.getUpcomingMovies().subscribe(
+      data => {
+        console.log(data['movies'])
+        this.upcomingMovies = data['movies']
+      }, err => {
+        console.log(err)
+      }
+    )
 
     setInterval(() => {
       if(this.i === 0) {
@@ -35,15 +50,60 @@ export class LandingComponent implements OnInit {
       }
     }, 2000)
 
-    // getting upcoming moives
-    this.landingPageService.getUpcomingMovies().subscribe(
-      data => {
-        console.log(data['movies'])
-        this.upcomingMovies = data['movies']
-      }, err => {
-        console.log(err)
+  }
+
+    signPop() {
+
+      const $ = window['$']
+
+      if(this.signTab) {
+
+        $('#signupcontainer').animate({
+          height: '60vh',
+          opacity: '1',
+          // padding: '1rem 30%',
+        }, 500)
+
+        $('.carousel-container').animate({
+          height: '0vh',
+          opacity: '0'
+        }, 500)
+
+        this.buttonText = 'X'
+
+      } else if(!this.signTab) {
+
+        $('#signupcontainer').animate({
+          height: '0',
+          opacity: '0',
+          // padding: '0rem'
+        }, 500)
+
+        $('.carousel-container').animate({
+          height: '70vh',
+          opacity: '1'
+        },500)
+
+        this.buttonText = 'SignUp'
       }
-    )
+      this.signTab = !this.signTab
+    }
+
+  signup() {
+    this.signupCondition = !this.signupCondition
+    if(this.signupCondition) {
+      this.loginContent = 'SignUp'
+    } else if(!this.signupCondition) {
+      this.loginContent = 'SignIn'
+    }
+  }
+
+  onSubmit(data: NgForm) {
+    if(this.signupCondition) {
+      console.log('Register' + data.value)
+    } else if(!this.signupCondition) {
+      console.log('Login' + data.valid)
+    }
   }
 
 }
