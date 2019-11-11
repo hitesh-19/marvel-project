@@ -1,7 +1,7 @@
 <div class="btn2">
     <button id="btn21" class="btn22" (click)="signPop()">{{buttonText}}</button>
 </div>
-<div class="signup-container" [ngStyle]="{display: signinCondition}" id="signupcontainer">
+<div class="signup-container" id="signupcontainer">
     <div class="inner-form">
         <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div class="form-group" ngModelGroup="userData" #userData="ngModelGroup">
