@@ -52,42 +52,42 @@ export class LandingComponent implements OnInit {
 
   }
 
-    signPop() {
+  signPop() {
 
-      const $ = window['$']
+    const $ = window['$']
 
-      if(this.signTab) {
+    if(this.signTab) {
 
-        $('#signupcontainer').animate({
-          height: '60vh',
-          opacity: '1',
-          // padding: '1rem 30%',
-        }, 500)
+      $('#signupcontainer').animate({
+        height: '60vh',
+        opacity: '1',
+        // padding: '1rem 30%',
+      }, 500)
 
-        $('.carousel-container').animate({
-          height: '0vh',
-          opacity: '0'
-        }, 500)
+      $('.carousel-container').animate({
+        height: '0vh',
+        opacity: '0'
+      }, 500)
 
-        this.buttonText = 'X'
+      this.buttonText = 'X'
 
-      } else if(!this.signTab) {
+    } else if(!this.signTab) {
 
-        $('#signupcontainer').animate({
-          height: '0',
-          opacity: '0',
-          // padding: '0rem'
-        }, 500)
+      $('#signupcontainer').animate({
+        height: '0',
+        opacity: '0',
+        // padding: '0rem'
+      }, 500)
 
-        $('.carousel-container').animate({
-          height: '70vh',
-          opacity: '1'
-        },500)
+      $('.carousel-container').animate({
+        height: '70vh',
+        opacity: '1'
+      },500)
 
-        this.buttonText = 'SignUp'
-      }
-      this.signTab = !this.signTab
+      this.buttonText = 'SignUp'
     }
+    this.signTab = !this.signTab
+  }
 
   signup() {
     this.signupCondition = !this.signupCondition
@@ -100,9 +100,22 @@ export class LandingComponent implements OnInit {
 
   onSubmit(data: NgForm) {
     if(this.signupCondition) {
-      console.log('Register' + data.value)
+      this.landingPageService.signUp(data.value).subscribe(
+        data => {
+          console.log(data)
+          this.signPop()
+        }, err => {
+          console.log(err)
+        }
+      )
     } else if(!this.signupCondition) {
-      console.log('Login' + data.valid)
+      this.landingPageService.signIn(data.value).subscribe(
+        data => {
+          console.log(data)
+        }, err => {
+          console.log(err)
+        }
+      )
     }
   }
 
