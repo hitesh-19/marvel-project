@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FanclubModule } from './fanclub/fanclub.module';
 import { ComicsModule } from './comics/comics.module';
 import { CharactersModule } from './characters/characters.module';
+import { AuthGuard } from './auth.guard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { HerosService } from './_services/heros.service';
 
 @NgModule({
@@ -25,14 +27,15 @@ import { CharactersModule } from './characters/characters.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    // MaterializeModule,
     MoviesModule,
     LandingModule,
     FanclubModule,
     ComicsModule,
-    CharactersModule
+    CharactersModule,
+    BrowserAnimationsModule
   ],
-  providers: [
-  ],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

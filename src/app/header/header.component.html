@@ -1,3 +1,9 @@
+<div class="alert alert-warning" id="alertMsg"
+    style="position: absolute; top: 2%; left: 1%; opacity: 0.8;"
+    *ngIf="alertMessage">
+    Please first <strong>Login</strong>
+</div>
+
 <div class="header">
     <nav class="header-bar">
         <div class="header-logo">
@@ -15,13 +21,13 @@
             <li class="nav-item active" routerLink="/">
                 <a> Home </a>
             </li>
-            <li class="nav-item" routerLink="/movies">
+            <li class="nav-item" routerLink="/movies" (click)="checkAlert()">
                 <a> Movies</a>
             </li>
-            <li class="nav-item" routerLink="/comics">
+            <li class="nav-item" routerLink="/comics" (click)="checkAlert()">
                 <a> Comics</a>
             </li>
-            <li class="nav-item" routerLink="/characters" style="border-right: none;">
+            <li class="nav-item" routerLink="/characters" style="border-right: none;" (click)="checkAlert()">
                 <a> Characters</a>
             </li>
             <li class="nav-item" routerLink="/fanclub">

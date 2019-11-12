@@ -1,3 +1,13 @@
+.disable-page {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+    top: 0%;
+    cursor: not-allowed;
+}
 .btn2 {
     position: absolute;
     right: 1%;

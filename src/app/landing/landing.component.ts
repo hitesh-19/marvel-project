@@ -16,6 +16,7 @@ export class LandingComponent implements OnInit {
   public signupCondition: boolean = true;
   public signTab: boolean = true;
   public buttonText = 'SignUp';
+  public disablePage = 'none';
 
   public upcomingMovies = [];
 
@@ -99,21 +100,31 @@ export class LandingComponent implements OnInit {
   }
 
   onSubmit(data: NgForm) {
+
+    this.disablePage = 'block';
+
     if(this.signupCondition) {
+
       this.landingPageService.signUp(data.value).subscribe(
         data => {
           console.log(data)
           this.signPop()
+          this.disablePage = 'none';
         }, err => {
           console.log(err)
+          this.disablePage = 'none';
         }
       )
     } else if(!this.signupCondition) {
+
       this.landingPageService.signIn(data.value).subscribe(
         data => {
           console.log(data)
+          this.signPop()
+          this.disablePage = 'none';
         }, err => {
           console.log(err)
+          this.disablePage = 'none';
         }
       )
     }

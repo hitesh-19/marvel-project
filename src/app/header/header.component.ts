@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LandingPageService } from '../_services/landing-page.service';
+import { AuthGuard } from '../auth.guard';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,26 @@ import { LandingPageService } from '../_services/landing-page.service';
 export class HeaderComponent implements OnInit {
 
   // public value;
-  // public signinCondition = 'none';
+  public alertMessage: boolean = false;
 
-  constructor(private landingPageService: LandingPageService) { }
+  constructor(private landingPageService: LandingPageService, private authGuard: AuthGuard) { }
 
   ngOnInit() {
 
+    const $ = window['$']
+
+    $('li').click(() => {
+      $('#alertMsg').animate({
+        opacity: '0.8'
+      },1)
+      $('#alertMsg').animate({
+        opacity: '0'
+      },3000)
+    })
+  }
+
+  checkAlert() {
+    this.alertMessage = this.authGuard.alertMsg
   }
 
 }

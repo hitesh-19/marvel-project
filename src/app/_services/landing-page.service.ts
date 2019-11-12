@@ -7,6 +7,8 @@ import { map } from 'rxjs/operators';
 })
 export class LandingPageService {
 
+  public isLoggedIn: boolean = false;
+
   private API = '/assets/database';
 
   constructor(private http: HttpClient) { }
@@ -16,23 +18,13 @@ export class LandingPageService {
   }
 
   signUp(userData) {
+    this.isLoggedIn = true;
     return this.http.post('https://formarvelfans-567a5.firebaseio.com/post.json', userData)
   }
 
   signIn(userData) {
+    this.isLoggedIn = true;
     return this.http.get('https://formarvelfans-567a5.firebaseio.com/post.json')
-    // .pipe(
-    //   map(res => {
-
-    //       if(res['name'].userData.email === userData.email) {
-    //         if(res['name'].userData.password === userData.password) {
-    //           return res;
-    //         } else {
-    //           console.log('user not found')
-    //         }
-    //       }
-    //   })
-    // )
   }
 
 }
