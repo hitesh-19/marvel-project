@@ -64,7 +64,7 @@ export class LandingComponent implements OnInit {
     if(this.signTab) {
 
       $('#signupcontainer').animate({
-        height: '60vh',
+        height: '40vh',
         opacity: '1',
       }, 500)
       $('.carousel-container').animate({
