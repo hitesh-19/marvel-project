@@ -53,20 +53,23 @@ export class LandingPageService {
   }
 
   // error handling method
-  private errorHandling(error: HttpErrorResponse) {
-
+  private errorHandling(errmsg: HttpErrorResponse) {
+    // console.log(errmsg)
     let errorMsg = 'An unknown error occure'
 
-    if(!error.error || !error.error.error) {
+    if(!errmsg.error || !errmsg.error.error) {
       return throwError(errorMsg)
     }
-    switch(error.error.error.message) {
+    switch(errmsg.error.error.message) {
       case 'EMAIL_EXISTS':
         errorMsg = 'Email already exist';
+        break;
       case 'EMAIL_NOT_FOUND':
         errorMsg = 'Email not found';
+        break;
       case 'INVALID_PASSWORD':
         errorMsg = 'Invalid password';
+        break;
     }
     return throwError(errorMsg)
   }

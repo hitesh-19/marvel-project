@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center; margin-top: 10%"></app-loading-spinner>
 </div>
-<div class="btn2">
+<div class="btn2" *ngIf="!signinAuth">
     <button id="btn21" class="btn22" (click)="signPop()">{{buttonText}}</button>
 </div>
 <div class="signup-container" id="signupcontainer">

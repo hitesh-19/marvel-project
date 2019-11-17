@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
       },1)
       $('#alertMsg').animate({
         opacity: '0'
-      },3000)
+      },1000)
     })
   }
 

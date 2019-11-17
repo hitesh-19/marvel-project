@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LandingPageService } from '../_services/landing-page.service';
 import { NgForm } from '@angular/forms';
+import { AuthGuard } from '../auth.guard';
 
 @Component({
   selector: 'app-landing',
@@ -19,12 +20,15 @@ export class LandingComponent implements OnInit {
   public disablePage = 'none';
   public errorMsg: string = null;
   public signupMethod;
+  public signinAuth: boolean = false;
 
   public upcomingMovies = [];
 
-  constructor(private landingPageService: LandingPageService) { }
+  constructor(private landingPageService: LandingPageService, private authGuard: AuthGuard) { }
 
-  ngOnInit() {
+  ngOnInit() {;
+
+    this.signinAuth = this.authGuard.alertMsg;
 
     // getting upcoming moives
     this.landingPageService.getUpcomingMovies().subscribe(
@@ -68,7 +72,7 @@ export class LandingComponent implements OnInit {
         opacity: '1',
       }, 500)
       $('.carousel-container').animate({
-        height: '0vh',
+        height: '0',
         opacity: '0'
       }, 500)
 
@@ -81,7 +85,7 @@ export class LandingComponent implements OnInit {
         opacity: '0',
       }, 500)
       $('.carousel-container').animate({
-        height: '70vh',
+        height: '71vh',
         opacity: '1'
       },500)
 
@@ -124,6 +128,7 @@ export class LandingComponent implements OnInit {
         console.log(data)
         this.signPop()
         this.disablePage = 'none';
+        this.signinAuth = true;
       }, err => {
         console.log(err)
         this.errorMsg = err
