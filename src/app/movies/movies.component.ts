@@ -14,10 +14,14 @@ export class MoviesComponent implements OnInit {
   public filter: string;
   public filteredArray = [];
   public noResult = 'none';
+  public disablePage: string = 'none';
+  public loadingSpinner: boolean = false;
 
   constructor(private moivesService: MoviesService) {}
 
   ngOnInit() {
+
+    this.loadingSpinner = true;
 
     const $ = window["$"];
 
@@ -34,8 +38,10 @@ export class MoviesComponent implements OnInit {
       data => {
         this.movies = data['movies']
         this.filteredArray = this.movies
+        this.loadingSpinner = false;
       }, err => {
         console.log(err)
+        this.loadingSpinner = false;
       }
     )
 
@@ -43,7 +49,7 @@ export class MoviesComponent implements OnInit {
 
   searchItems(item) {
     // console.log(item.value)
-    this.filter = item.value.slice(0,3)
+    this.filter = item.value
     this.filter = this.filter.charAt(0).toUpperCase()+this.filter.slice(1)
     // console.log(this.filter)
 
@@ -54,6 +60,16 @@ export class MoviesComponent implements OnInit {
     }
 
     this.movies.forEach((element, index, array) => {
+
+
+      // for(let i = 1; i < this.filter.length; i++) {
+      //   console.log(this.filter.length)
+      //   if(this.filter === element.series.substring(0,i)) {
+      //     console.log(element.series)
+      //     this.filteredArray.push(element)
+      //   }
+      // }
+
       if(element.series.slice(0,3) === this.filter) {
         // console.log(element.series)
         

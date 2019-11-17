@@ -12,10 +12,13 @@ export class ComicsComponent implements OnInit {
   public filter: string;
   public filteredArray = [];
   public noResult = 'none';
+  public loadingSpinner: boolean = false;
 
   constructor(private comicsService: ComicsService) { }
 
   ngOnInit() {
+
+    this.loadingSpinner = true;
   
     const $ = window["$"];
 
@@ -33,8 +36,10 @@ export class ComicsComponent implements OnInit {
         console.log(data)
         this.comics = data['comics']
         this.filteredArray = this.comics
+        this.loadingSpinner = false;
       }, err => {
         console.log(err)
+        this.loadingSpinner = false;
       }
     )
 

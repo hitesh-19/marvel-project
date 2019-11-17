@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FanclubComponent implements OnInit {
 
+  public fanclubPage: boolean = false;
   constructor() { }
 
   ngOnInit() {

@@ -17,6 +17,8 @@ export class LandingComponent implements OnInit {
   public signTab: boolean = true;
   public buttonText = 'SignUp';
   public disablePage = 'none';
+  public errorMsg: string = null;
+  public signupMethod;
 
   public upcomingMovies = [];
 
@@ -27,13 +29,14 @@ export class LandingComponent implements OnInit {
     // getting upcoming moives
     this.landingPageService.getUpcomingMovies().subscribe(
       data => {
-        console.log(data['movies'])
+        // console.log(data['movies'])
         this.upcomingMovies = data['movies']
       }, err => {
         console.log(err)
       }
     )
 
+    // image time interval
     setInterval(() => {
       if(this.i === 0) {
         this.kevinFeige = '../../assets/images/kevinfeige.jpg'
@@ -53,6 +56,7 @@ export class LandingComponent implements OnInit {
 
   }
 
+  // signin and carousel pop up
   signPop() {
 
     const $ = window['$']
@@ -62,9 +66,7 @@ export class LandingComponent implements OnInit {
       $('#signupcontainer').animate({
         height: '60vh',
         opacity: '1',
-        // padding: '1rem 30%',
       }, 500)
-
       $('.carousel-container').animate({
         height: '0vh',
         opacity: '0'
@@ -77,9 +79,7 @@ export class LandingComponent implements OnInit {
       $('#signupcontainer').animate({
         height: '0',
         opacity: '0',
-        // padding: '0rem'
       }, 500)
-
       $('.carousel-container').animate({
         height: '70vh',
         opacity: '1'
@@ -90,6 +90,7 @@ export class LandingComponent implements OnInit {
     this.signTab = !this.signTab
   }
 
+
   signup() {
     this.signupCondition = !this.signupCondition
     if(this.signupCondition) {
@@ -99,35 +100,36 @@ export class LandingComponent implements OnInit {
     }
   }
 
+  // On submitting of userData login and signin
   onSubmit(data: NgForm) {
 
     this.disablePage = 'block';
 
     if(this.signupCondition) {
-
-      this.landingPageService.signUp(data.value).subscribe(
-        data => {
-          console.log(data)
-          this.signPop()
-          this.disablePage = 'none';
-        }, err => {
-          console.log(err)
-          this.disablePage = 'none';
-        }
-      )
+      this.signupMethod = this.landingPageService.signUp(data.value.userData)
+      this.SubmittingUserData()
     } else if(!this.signupCondition) {
-
-      this.landingPageService.signIn(data.value).subscribe(
-        data => {
-          console.log(data)
-          this.signPop()
-          this.disablePage = 'none';
-        }, err => {
-          console.log(err)
-          this.disablePage = 'none';
-        }
-      )
+      this.signupMethod = this.landingPageService.signIn(data.value.userData)
+      this.SubmittingUserData()
     }
+
+    data.reset();
+  }
+
+  // login and signin method
+  private SubmittingUserData () {
+
+    this.signupMethod.subscribe(
+      data => {
+        console.log(data)
+        this.signPop()
+        this.disablePage = 'none';
+      }, err => {
+        console.log(err)
+        this.errorMsg = err
+        this.disablePage = 'none';
+      }
+    )
   }
 
 }

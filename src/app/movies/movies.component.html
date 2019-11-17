@@ -1,3 +1,10 @@
+<!-- <div class="disable-page" [ngStyle]="{display:disablePage}">
+    <app-loading-spinner style="
+    display: flex;
+    justify-content: center;
+    align-items: center; margin-top: 10%"></app-loading-spinner>
+</div> -->
+
 <div class="dropdown"> 
     <div class="row">
         <div class="col-sm-7">
@@ -15,6 +22,14 @@
         </div>
     </div>
 </div>
+
+<!-- Loading-Spinner -->
+<app-loading-spinner style="
+    display: flex;
+    justify-content: center;
+    align-items: center;" *ngIf="loadingSpinner">
+</app-loading-spinner>
+
 <div class="movies" *ngFor="let series of filteredArray">
     <div class="movie-name" >
         {{ series.series}} <span>{{ series.interval }}</span>

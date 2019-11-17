@@ -15,6 +15,14 @@
         </div>
     </div>
 </div>
+
+<!-- Loading-Spinner -->
+<app-loading-spinner style="
+    display: flex;
+    justify-content: center;
+    align-items: center;" *ngIf="loadingSpinner">
+</app-loading-spinner>
+
 <div class="movies" *ngFor="let comic of filteredArray">
     <div class="movie-name">
         {{comic.series}} <span>({{ comic.interval }})</span>

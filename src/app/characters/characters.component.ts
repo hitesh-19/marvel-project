@@ -18,19 +18,22 @@ export class CharactersComponent implements OnInit {
   public filteredArray = [];
   public filter: string;
   public noResult = 'none';
+  public loadingSpinner: boolean = false;
 
   constructor(private herosService: HerosService) { }
 
   ngOnInit() {
-
+    this.loadingSpinner = true;
     //getting heros
     this.herosService.getHeros().subscribe(
       data => {
         // console.log(data['heros'])
         this.characters = data['heros']
         this.filteredArray = this.characters
+        this.loadingSpinner = false;
       }, err => {
         console.log(err)
+        this.loadingSpinner = false;
       }
     )
 
